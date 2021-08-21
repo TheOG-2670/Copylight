@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppAppBar from "../../views/AppAppBar";
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,67 +58,39 @@ export default function Product() {
                 <div className={classes.heroContent}>
                     <Container maxWidth="sm">
                         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                            Album layout
+                            WE LOVE TO BOOGIE
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Something short and leading about the collection below—its contents, the creator, etc.
-                            Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-                            entirely.
+                            MONSTERCAT
                         </Typography>
-                        <div className={classes.heroButtons}>
-                            <Grid container spacing={2} justifyContent="center">
-                                <Grid item>
-                                    <Button variant="contained" color="primary">
-                                        Main call to action
-                                    </Button>
-                                </Grid>
-                                <Grid item>
-                                    <Button variant="outlined" color="primary">
-                                        Secondary action
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                        </div>
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
-                            <Grid item xs={12} sm={6} md={4}>
                                 <Card className={classes.card}>
                                     <CardMedia
                                         className={classes.cardMedia}
-                                        image="https://source.unsplash.com/random"
+                                        image="https://unsplash.com/photos/88jdTjSu914/download?force=true&w=1920"
                                         title="Image title"
                                     />
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            Heading
+                                            <PlayCircleFilledIcon/>
                                         </Typography>
                                         <Typography>
-                                            This is a media card. You can use this section to describe the content.
+                                            Price: <b>0.02 ETH</b>
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
                                         <Button size="small" color="primary">
-                                            View
+                                            Add to cart
                                         </Button>
-                                        <Button size="small" color="primary">
-                                            Edit
+                                        <Button size="small" color="primary" href="/browse">
+                                            Back to browse
                                         </Button>
                                     </CardActions>
                                 </Card>
-                            </Grid>
                 </Container>
             </main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
-                </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    Something here to give the footer a purpose!
-                </Typography>
-            </footer>
-            {/* End footer */}
         </React.Fragment>
     );
 }
