@@ -1,11 +1,11 @@
 import React from "react";
+import AppAppBar from "../../views/AppAppBar";
 
 const Browsing = () => {
     return (
-        <div>
-            <h1>Browsing</h1>
-            <h2>Welcome to the Browsing Page</h2>
-        </div>
+        <React.Fragment>
+            <AppAppBar />
+        </React.Fragment>
     );
 };
 

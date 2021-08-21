@@ -1,11 +1,11 @@
 import React from "react";
+import AppAppBar from "../../views/AppAppBar";
 
 const Payment = () => {
     return (
-        <div>
-            <h1>Payment</h1>
-            <h2>Welcome to the Payment Page</h2>
-        </div>
+        <React.Fragment>
+            <AppAppBar />
+        </React.Fragment>
     );
 };
 
