@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Landing from "./components/Landing";
-import Browsing from "./components/Browsing";
+import Landing from "./components/Pages/Landing";
+import Browsing from "./components/Pages/Browsing";
 
 
 function App() {
