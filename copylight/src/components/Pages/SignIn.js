@@ -40,11 +40,12 @@ export default function SignIn() {
   const [password, setPassword] = React.useState(null);
 
   const retreieveCredentials = (event) => {
-    event.preventDefault();
+
     setUsername(document.getElementById('email').value);
     setPassword(document.getElementById('password').value);
     console.log(username);
     console.log(password);
+    event.preventDefault();
   }
 
 
