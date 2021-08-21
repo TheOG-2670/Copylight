@@ -50,14 +50,14 @@ function AppAppBar(props) {
             className={classes.title}
             href="/"
           >
-            {"Copylight"}
+            {"©"}
           </Link>
           <div className={classes.right}>
             <Link
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink)}
-                href="/browse/"
+                href="/browse"
             >
               {'Browse'}
             </Link>
@@ -65,7 +65,7 @@ function AppAppBar(props) {
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink)}
-                href="/payment/"
+                href="/payment"
             >
               {'Cart'}
             </Link>
