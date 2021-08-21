@@ -48,7 +48,7 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/sign-up/"
+        href="/signup/"
       >
         Register
       </Button>
