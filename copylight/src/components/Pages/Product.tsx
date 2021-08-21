@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppAppBar from "../../views/AppAppBar";
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import IconButton from '@material-ui/core/IconButton';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,8 +47,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
 export default function Product() {
     const classes = useStyles();
+
+    function playSound() {
+        const sound = document.getElementById("audio");
+        // @ts-ignore
+        sound.play();
+    }
 
     return (
         <React.Fragment>
@@ -74,7 +82,8 @@ export default function Product() {
                                     />
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            <PlayCircleFilledIcon/>
+                                            <audio id="audio" src="https://www.soundjay.com/buttons/button-42.mp3"/>
+                                            <IconButton onClick={playSound}><PlayCircleFilledIcon/></IconButton>
                                         </Typography>
                                         <Typography>
                                             Price: <b>0.02 ETH</b>
