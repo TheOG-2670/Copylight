@@ -36,6 +36,18 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
   const classes = useStyles();
 
+  const [username, setUsername] = React.useState(null);
+  const [password, setPassword] = React.useState(null);
+
+  const retreieveCredentials = (event) => {
+    event.preventDefault();
+    setUsername(document.getElementById('email').value);
+    setPassword(document.getElementById('password').value);
+    console.log(username);
+    console.log(password);
+  }
+
+
   return (
       <React.Fragment>
       <AppAppBar/>
@@ -81,6 +93,7 @@ export default function SignIn() {
                 variant="contained"
                 color="primary"
                 className={classes.submit}
+                onClick={retreieveCredentials}
             >
               Sign In
             </Button>
