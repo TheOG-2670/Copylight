@@ -6,6 +6,7 @@ import Checkout from "./components/Checkout";
 import Product from "./components/Pages/Product";
 import SignUp from "./components/Pages/SignUp";
 import SignIn from "./components/Pages/SignIn";
+import Payment from "./components/Pages/Payment";
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
               <Product />
             </Route>
             <Route path="/payment">
-              <Checkout />
+              <Payment />
             </Route>
             <Route path="/signup">
               <SignUp />

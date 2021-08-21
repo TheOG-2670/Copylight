@@ -1,10 +1,10 @@
 import React from "react";
-import AppAppBar from "../../views/AppAppBar";
+import Checkout from "../Checkout";
 
 const Payment = () => {
     return (
         <React.Fragment>
-            <AppAppBar />
+            <Checkout/>
         </React.Fragment>
     );
 };

@@ -57,7 +57,7 @@ function AppAppBar(props) {
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink)}
-                href="/product"
+                href="/browse"
             >
               {'Browse'}
             </Link>

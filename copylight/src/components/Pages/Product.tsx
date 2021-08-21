@@ -11,6 +11,7 @@ import Container from '@material-ui/core/Container';
 import AppAppBar from "../../views/AppAppBar";
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import IconButton from '@material-ui/core/IconButton';
+import {Redirect} from "react-router";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,6 +55,14 @@ export default function Product() {
         const sound = document.getElementById("audio");
         // @ts-ignore
         sound.play();
+    }
+
+    const isAuthenticated = true;
+
+    if (!isAuthenticated) {
+        return (
+            <Redirect to="/signin" />
+        )
     }
 
     return (

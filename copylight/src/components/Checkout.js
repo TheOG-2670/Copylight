@@ -11,6 +11,7 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import AppAppBar from "../views/AppAppBar";
+import {Redirect} from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -75,6 +76,14 @@ export default function Checkout() {
     const handleBack = () => {
         setActiveStep(activeStep - 1);
     };
+
+    const isAuthenticated = true;
+
+    if (!isAuthenticated) {
+        return (
+            <Redirect to="/signin" />
+        )
+    }
 
     return (
         <React.Fragment>
