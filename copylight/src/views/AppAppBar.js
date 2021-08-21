@@ -50,13 +50,14 @@ function AppAppBar(props) {
             className={classes.title}
             href="/"
           >
+            {"Copylight"}
           </Link>
           <div className={classes.right}>
             <Link
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink)}
-                href="/sign-up/"
+                href="/browse/"
             >
               {'Browse'}
             </Link>
@@ -64,7 +65,7 @@ function AppAppBar(props) {
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink)}
-                href="/sign-up/"
+                href="/payment/"
             >
               {'Cart'}
             </Link>
@@ -73,7 +74,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/sign-in/"
+              href="/signin/"
             >
               {'Sign In'}
             </Link>
@@ -81,7 +82,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/sign-up/"
+              href="/signup/"
             >
               {'Sign Up'}
             </Link>
