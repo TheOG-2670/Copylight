@@ -2,15 +2,31 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Landing from "./components/Pages/Landing";
 import Browsing from "./components/Pages/Browsing";
-import Checkout from "./components/Checkout";
 import Product from "./components/Pages/Product";
 import SignUp from "./components/Pages/SignUp";
 import SignIn from "./components/Pages/SignIn";
 import Payment from "./components/Pages/Payment";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import React from "react";
+
+
 
 
 function App() {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const theme = React.useMemo(
+      () =>
+          createTheme({
+            palette: {
+              type: prefersDarkMode ? 'dark' : 'light',
+            },
+          }),
+      [prefersDarkMode],
+  );
   return (
+      <ThemeProvider theme={theme}>
       <Router>
         <div>
           <nav>
@@ -56,6 +72,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      </ThemeProvider>
   );
 }
 

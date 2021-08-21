@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(5),
         margin: 'auto',
         maxWidth: 1500,
     },
@@ -39,9 +39,9 @@ const Browsing = () => {
     }
     else {
         return (
+            <div style={{ backgroundColor: "#242424"}}>
             <React.Fragment>
                 <AppAppBar/>
-                <div className={classes.root}>
                     <Paper className={classes.paper}>
                         <Grid container   direction="row"
                               justifyContent="center"
@@ -85,10 +85,22 @@ const Browsing = () => {
                             <Grid item xs={3}  >
                                 <AlbumCard/>
                             </Grid>
+                            <Grid item xs={3}  >
+                                <AlbumCard/>
+                            </Grid>
+                            <Grid item xs={3} direction="row">
+                                <AlbumCard/>
+                            </Grid>
+                            <Grid item xs={3} >
+                                <AlbumCard/>
+                            </Grid>
+                            <Grid item xs={3}  >
+                                <AlbumCard/>
+                            </Grid>
                         </Grid>
                     </Paper>
-                </div>
             </React.Fragment>
+            </div>
         );
     }
 };
