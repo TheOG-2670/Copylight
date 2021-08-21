@@ -101,7 +101,6 @@ export default function Checkout() {
                                 <Typography variant="subtitle1">
                                     Your order number is #2001539. We have emailed your order confirmation. You will receive your Music License Agreement shortly.
                                 </Typography>
-
                             </React.Fragment>
                         ) : (
                             <React.Fragment>
