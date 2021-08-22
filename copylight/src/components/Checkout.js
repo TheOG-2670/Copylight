@@ -12,7 +12,7 @@ import PaymentForm from './PaymentForm';
 import Review from './Review';
 import AppAppBar from "../views/AppAppBar";
 import {Redirect} from "react-router";
-
+import Link from '@material-ui/core/Link';
 const useStyles = makeStyles((theme) => ({
     appBar: {
         position: 'relative',
@@ -48,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(3),
         marginLeft: theme.spacing(1),
     },
+
+    link : {
+        color: '#F0FFFF',
+    }
 }));
 
 const steps = ['Terms and Conditions', 'Payment details', 'Review your order'];
@@ -149,6 +153,10 @@ export default function Checkout() {
                                 <Typography variant="subtitle1">
                                     Your Smart Contract has been deployed. Your Purchase is Complete. We have emailed your order confirmation. You will receive your Music License Agreement shortly.
                                 </Typography>
+
+                                <Link href="/browse" variant="body2">
+                                Back To Browse
+                                </Link>
                             </React.Fragment>
                         ) : (
                             <React.Fragment>
