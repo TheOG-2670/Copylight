@@ -18,14 +18,43 @@ app.use('/sample_clips', express.static(path.join(__dirname, 'public')))
 app.use(express.json());
 
 //ACCOUNT MANAGEMENT ROUTES
+app.post('/api/signin', (req, res)=>{
+    if(req.body.email!=='' && req.body.password!=='')
+    {
+        const existingUser={
+            text: 'SELECT firstName, lastName FROM Users WHERE email=$1 AND password=$2',
+            values: [req.body.email, req.body.password]
+        }
+
+        pool.connect((err, client, done) => {
+            dbResult=(result)=>{
+                return res.json({
+                    response: result
+                })
+            }
+            client.query(existingUser, (err, res) => {
+                done()
+                if(err || res.rows[0] === undefined) {
+                    console.log(err)
+                    dbResult("unauthorized")
+                }
+                else{
+                    console.log(res.rows[0])
+                    dbResult("authenticated")
+                }
+            })
+        })
+    }
+})
+
 app.post('/api/new_signup', (request, response)=>{
-    console.log(request.body)
+    let password=request.body.password
     let pattern=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=])(?=\S+$).{8,}$/
     if(password.length > 7 && password.length < 33 && password.match(pattern))
     {
         const newUser={
-            text: 'INSERT INTO Users VALUES($1, $2, $3, $4)',
-            values: [request.body.firstName, request.body.lastName, request.body.email, password]
+            text: 'INSERT INTO Users(email, firstName, lastName, password) VALUES($1, $2, $3, $4)',
+            values: [request.body.email, request.body.firstName, request.body.lastName, password]
         }
         pool.connect((err, client, done) => {
             dbResult=(result)=>{
