@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import SearchBar from "material-ui-search-bar";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,9 +41,12 @@ const Browsing = () => {
     else {
         return (
             <div style={{ backgroundColor: "#242424"}}>
+
             <React.Fragment>
                 <AppAppBar/>
                     <Paper className={classes.paper}>
+                        <SearchBar
+                        />
                         <Grid container   direction="row"
                               justifyContent="center"
                               alignItems="center"><Typography component="h2" variant="h2">Browse the Collection</Typography></Grid>
