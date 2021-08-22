@@ -3,11 +3,6 @@ const app = express();
 const path = require('path')
 const {Pool} = require('pg');
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
-=======
-const { resolveSoa } = require('dns');
-// const bodyParser = require('body-parser')
->>>>>>> 1a80f6d324f420a7fd1c249aa893c54f00eb5b3c
 const HTTP_PORT = 8080 || process.env.PORT;
 require('dotenv').config()
 
