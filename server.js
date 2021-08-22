@@ -21,46 +21,6 @@ const pool = new Pool({
 
 app.use('/sample_clips', express.static(path.join(__dirname, 'public')))
 app.use(express.json());
-<<<<<<< HEAD
-
-// app.get('/api/test', function (req, res) {
-//     pool.connect((err, client, done) => {
-//         dbResult=(result)=>{
-//             return res.json({
-//                 response: result
-//             })
-//         }
-//         client.query('SELECT NOW()', (err, res) => {
-//           done()
-//           if (err) {
-//             console.log(err.stack)
-//           } else {    
-//             dbResult(res.rows[0])
-//           }
-//         })
-//     })
-// });
-=======
-// app.use(bodyParser.urlencoded({extended:true}))
-
-app.get('/api/test', function (req, res) {
-    pool.connect((err, client, done) => {
-        dbResult=(result)=>{
-            return res.json({
-                response: result
-            })
-        }
-        client.query('SELECT NOW()', (err, res) => {
-          done()
-          if (err) {
-            console.log(err.stack)
-          } else {    
-            dbResult(res.rows[0])
-          }
-        })
-    })
-});
->>>>>>> 1a80f6d324f420a7fd1c249aa893c54f00eb5b3c
 
 //ACCOUNT MANAGEMENT ROUTES
 app.post('/api/new_signup', (request, response)=>{
