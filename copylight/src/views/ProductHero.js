@@ -40,7 +40,7 @@ function ProductHero(props) {
         COPYLIGHT
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-       Copyrighting Music at the Speed of Light
+        Licensing Music Copyrights At The Speed Of Light
       </Typography>
       <Button
         color="secondary"
@@ -53,7 +53,7 @@ function ProductHero(props) {
         Register
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+        Start Licensing Now
       </Typography>
     </ProductHeroLayout>
   );

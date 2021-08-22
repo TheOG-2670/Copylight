@@ -7,10 +7,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
 const products = [
-    { name: 'Product 1', desc: 'A nice thing', price: '0.01 ETH' },
-    { name: 'Product 2', desc: 'Another thing', price: '0.03 ETH' },
-    { name: 'Product 3', desc: 'Something else', price: '0.35 ETH' },
-    { name: 'Product 4', desc: 'Best thing of all', price: '0.56 ETH' },
+    { name: 'We Like To Boogie', desc: 'A nice thing', price: '0.02 ETH' },
+    
 ];
 
 const payments = [
@@ -50,7 +48,7 @@ export default function Review() {
                 <ListItem className={classes.listItem}>
                     <ListItemText primary="Total" />
                     <Typography variant="subtitle1" className={classes.total}>
-                        0.95 ETH
+                        0.02 ETH
                     </Typography>
                 </ListItem>
             </List>

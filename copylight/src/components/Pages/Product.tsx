@@ -98,8 +98,8 @@ export default function Product() {
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button size="small" color="primary">
-                                            Add to cart
+                                        <Button size="small" color="primary" href = "/payment">
+                                            Purchase Licensing
                                         </Button>
                                         <Button size="small" color="primary" href="/browse">
                                             Back to browse

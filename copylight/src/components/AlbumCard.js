@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ShopIcon from '@material-ui/icons/Shop';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -49,8 +50,9 @@ export default function AlbumCard() {
                         MONSTERCAT
                     </Typography>
                 </CardContent>
+                
                 <div className={classes.controls}>
-                    <Typography variant="subtitle2" color="textSecondary">Price: 0.05 ETH</Typography>
+                    <Typography variant="subtitle2" color="textSecondary">Price: 0.02 ETH</Typography>
                 <IconButton size="small" href="/product">
                     <ShopIcon/>
                 </IconButton>

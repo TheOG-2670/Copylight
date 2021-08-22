@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppAppBar from "../../views/AppAppBar";
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -46,6 +47,7 @@ export default function SignIn() {
     console.log(username);
     console.log(password);
     event.preventDefault();
+    
   }
 
 
@@ -88,13 +90,15 @@ export default function SignIn() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
             />
+            
             <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="primary"
                 className={classes.submit}
-                onClick={retreieveCredentials}
+                
+                href="/browse/"
             >
               Sign In
             </Button>
@@ -105,7 +109,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

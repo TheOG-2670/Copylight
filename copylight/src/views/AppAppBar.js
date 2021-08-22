@@ -38,7 +38,7 @@ const styles = (theme) => ({
 function AppAppBar(props) {
     const {classes} = props;
     const isAuthenticated = true;
-    const username = "John Doe";
+    const username = "";
 
     return (
         <div>

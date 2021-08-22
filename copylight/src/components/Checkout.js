@@ -75,8 +75,8 @@ export default function Checkout() {
         const Web3 = require('web3')
         const web3 = new Web3('HTTP://127.0.0.1:7545')
 
-        const account1 = '0xD3e02aA333D61AF4023D945A9C729585267e118b'
-        const owner = '0xd740e5E5BBfe1081631D78AdFF0aE9244aE87649'
+        const account1 = '0xD1a1e48BE1825C40128a5D228cA8c7272e37BE8d'
+        const owner = '0xfa2312B426Ec98AEB82175A744b6a46aF3C6C650'
         const privatekey = 'de39962d5e2aafac16b9b9cb7b97857764741aae21a879fb9f935e5589dfdb3b'
 
         const privateKey1 = Buffer.from(privatekey, 'hex')
@@ -105,7 +105,7 @@ export default function Checkout() {
         })
         })
         
-        web3.eth.sendTransaction({from: account1, to: owner, value: web3.utils.toWei('1','ether')})
+        web3.eth.sendTransaction({from: account1, to: owner, value: web3.utils.toWei('0.02','ether')})
         
         
         
@@ -147,7 +147,7 @@ export default function Checkout() {
                                     Thank you for your order.
                                 </Typography>
                                 <Typography variant="subtitle1">
-                                    Your order number is #2001539. We have emailed your order confirmation. You will receive your Music License Agreement shortly.
+                                    Your Smart Contract has been deployed. Your Purchase is Complete. We have emailed your order confirmation. You will receive your Music License Agreement shortly.
                                 </Typography>
                             </React.Fragment>
                         ) : (
