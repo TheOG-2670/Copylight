@@ -1,4 +1,5 @@
 # Copylight
+![alt text](https://github.com/TheOG-2670/Copylight/blob/main/copylight/src/assets/img/Copylight_logo.png)
 ## Inspiration
 I am an avid Youtube content watcher and I follow a lot of people on the website, and there was a recurring theme that these Youtubers complained about and it was about copyright strikes and how they are not able to produce the best content they have due to how complex it is to get a licensing agreement from the record company of mainstream music. I was astonished one day when I realized that there was not some new technology that solved this problem, this is when Copylight was born. I believe Copylight is the second generation of music commercialization, from selling music for people to listen, to now selling them to use.
 ## What it does
